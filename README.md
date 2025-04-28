@@ -32,7 +32,7 @@ Após a leitura da tensão via ADC, o sistema calcula a resistência real (`r_me
 
 O display OLED SSD1306 (128x64, via I2C) é o principal meio de feedback, exibindo:
 
-* Nomes das 3 faixas de cores (ou "-------" se inválido).
+* Nomes das 3 faixas de cores (ou "---N/D---" se inválido).
 * O valor bruto lido do ADC.
 * O modo de calibração ADC ativo ("USB" ou "BAT").
 * O valor da resistência REAL medida (completo, em Ohms).
@@ -53,7 +53,7 @@ O Botão A permite ao usuário alternar entre dois modos de calibração para o 
 ✅ Exibição no display OLED (I2C): Nomes das cores, Valor ADC, Modo (USB/BAT), Resistência REAL (Ohm), Resistência COMERCIAL (Ohm) ou status (Aberto/Curto/N/D E24).
 ✅ Exibição na Matriz de LEDs (PIO): Cores das 3 faixas nas colunas físicas 1, 3 e 5 (com mapeamento físico-lógico corrigido e brilho ajustável).
 ✅ Leitura do Botão A (GPIO 5) via Interrupção (IRQ) com tratamento de Debounce para alternar `current_adc_max_value`.
-✅ Função BOOTSEL no Botão B (GPIO 6) via Interrupção (IRQ) com Debounce.
+✅ Função BOOTSEL no Botão B (GPIO 6) via Interrupção (IRQ) com Debounce (comentada).
 ✅ Mensagens de log (inicialização, mudança de modo ADC) enviadas via `printf` (stdio/USB).
 ✅ Código estruturado em múltiplos módulos (`main.c`, `ohmmeter`, `display`, `led_matrix`, `buttons`, `debouncer`) para organização e clareza.
 ✅ Código comentado explicando as principais seções e lógicas.
