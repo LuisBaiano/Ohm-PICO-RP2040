@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = 'src/build/main.uf2'
+elf = 'src/build/main.elf'

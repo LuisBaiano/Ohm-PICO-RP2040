@@ -1,0 +1,6 @@
+build
+out
+.vscode
+pico_sdk_import.cmake
+src/CMakePresets.json
+
